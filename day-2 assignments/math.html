@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <body>
+        <h1>Mathematical Operations</h1>
+
+        <hr/>
+
+            Firstnumber=<input type="text" value="" id="t1"><br> <br>
+            second number=<input type="text" value="" id="t2"><br><br>
+            <input type="button" value="sum" id="sum" onclick="calculate(event)">
+            <input type="button" value="sub" id="sub" onclick="calculate(event)">
+            <input type="button" value="mul" id="mul" onclick="calculate(event)">
+            <input type="button" value="div" id="div" onclick="calculate(event)"><br><br>
+            result:<span id="result"></span>
+            <script>
+            
+           
+        
+                function calculate(event){
+                    let sol=event.target.id;
+                    let Firstnumber=Number(document.getElementById("t1").value);
+                    let secondnumber=Number(document.getElementById("t2").value);
+                    let result;
+
+                    if(sol==='sum'){
+                        result=Firstnumber+secondnumber;
+                    }else if(sol==='sub'){
+                         result=Firstnumber-secondnumber;
+                    }else if(sol==='mul'){
+                        result=Firstnumber*secondnumber;
+                    }else if(sol==='div'){
+                        result=Firstnumber/secondnumber;
+                    }
+                    document.getElementById("result").innerText=result;
+                }
+
+                
+            </script>
+           
+        </body>
+    </head>
+</html>

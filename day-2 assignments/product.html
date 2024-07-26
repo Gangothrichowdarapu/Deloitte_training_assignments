@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <body>
+        
+            Productname:<input type="text" value="" id="p1"><br> <br>
+            Unit price:<input type="text" value="" id="u1"><br><br>
+            Quantity:<input type="text" value="" id="q1"><br><br>
+            <input type="button" value="Get Total" onclick="calculateTotal()" ><br><br>
+            Total amount:<span id="result"></span>
+            <script>
+            
+                    function calculateTotal(){
+                    let Productname=document.getElementById("p1").value;
+                    let UnitPrice=Number(document.getElementById("u1").value);
+                    let Quantity=Number(document.getElementById("q1").value);
+                    let result=document.getElementById("result")
+
+                    let Total=UnitPrice*Quantity;
+                    let discount=0;
+
+                    if (Quantity>30){
+                        discount=0.20;
+                    
+                    }else if(Quantity>20){
+                        discount=0.15;
+                    
+                    }else if(Quantity>10){
+                         discount=0.10;
+                    
+                    }
+                    let discountedamount=Total*discount;
+                    let finalamount=Total-discountedamount;
+                    result.innerHTML=finalamount;
+                    
+
+                  
+                   
+                }
+            
+            </script>
+           
+        </body>
+    </head>
+</html>

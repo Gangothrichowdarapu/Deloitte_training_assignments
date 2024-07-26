@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <body>
+        
+            Firstnumber=<input type="text" value="" id="t1"><br> <br>
+            second number=<input type="text" value="" id="t2"><br><br>
+            <input type="button" value="sum" onclick="calculateSum()"><br><br>
+            result:<span id="result"></span>
+            <script>
+            
+           
+        
+                function calculateSum(){
+                    let Firstnumber=Number(document.getElementById("t1").value)
+                    let secondnumber=Number(document.getElementById("t2").value)
+                    var sum=Firstnumber+secondnumber;
+                    document.getElementById("result").innerText=sum;
+                   
+                }
+                
+            </script>
+           
+        </body>
+    </head>
+</html>

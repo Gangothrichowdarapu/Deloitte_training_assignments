@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            .success{
+                color: green;
+            }
+            .error{
+                color:red
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Login</h1>
+        username:<input type="text" id="username"><br><br>
+        password:<input type="text" id="password"><br><br>
+        <input type="button" onclick="login()" value="login">
+        <div class="result" id="result"></div>
+
+        <script>
+            function login(){
+                let username=document.getElementById("username").value;
+                let password=(document.getElementById("password").value);
+                let result=document.getElementById("result");
+
+                if(username=='admin'&&password=='1234'){
+                    result.innerHTML='welcome' +username;
+                    result.style.color='green';
+                }else{
+                    result.innerHTML=' Invalid username or password';
+                    result.style.color='red'; 
+                }
+            }
+        </script>
+    </body>
+
+</html>
