@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+<body>
+    <fieldset>
+        <legend>Friend's Details</legend>
+        Friend's Name : <input type="text" id="name" />
+        <br /><br />
+        Contact number: <input type="text" id="contact" />
+        <br /><br />
+        <input type="button" onclick="button1Click()" value="Add Friend" />
+        <input type="button" onclick="button2Click()" value="Get contact Number" />
+        <div id="result"></div>
+
+    </fieldset>
+    <script>
+        var mapObj = new Map();
+        function button1Click() {
+           
+        const name=document.getElementById('name').value;
+        const contactno=document.getElementById('contact').value;
+
+          if(name&&contactno){
+            mapObj.set(name,contactno);
+            var str=`name:${name},contactno:${contactno}`;
+            document.getElementById('result').innerHTML=str;
+          }
+        }
+
+        function button2Click()
+		{
+			
+            const name=document.getElementById('name').value;	
+			if (name){
+                if(mapObj&&(name)){
+                    const contactno=mapObj.get(name);
+                    var str=`contactno:${contactno}`;
+                    document.getElementById('result').innerHTML=str;
+                }
+            }
+            document.getElementById('name').value="";
+			
+		}
+    </script>
+
+</body>
+</head>
+
+</html>

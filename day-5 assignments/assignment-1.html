@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <input type="button" onclick="fn_button1Click()" value="Get Data" />
+    <script>
+        class BankAccount {
+            Accnumber = 1234;
+            name = "Gangothri";
+            city = "Hyderabad";
+            email = "gangothri@gmail.com";
+            phonenumber = 7993870666;
+
+            constructor(Accnumber) {
+                this.Accnumber = 1234;
+            }
+        }
+
+        class FDAccount extends BankAccount {
+            FDAmount = 50000;
+            IntrestRate = 0;
+            Duration = 0;
+
+            constructor(Accnumber, name, city, email, phonenumber, FDAmount,IntrestRate = 8.5, Duration = 12) {
+                super(Accnumber, name, city, email, phonenumber);
+                this.FDAmount = FDAmount;
+                this.IntrestRate = IntrestRate;
+                this.Duration = Duration;
+            }
+
+                showDetails()
+                {
+                    console.log(`Accnumber :  ${this.Accnumber}, name : ${this.name}, city : ${this.city}, email : ${this.email},phonenumber:${this.phonenumber},IntrestRate:${this.IntrestRate},Duration:${this.Duration}`);
+                }
+           
+        }
+        function fn_button1Click() {
+            var BankAccountobj = new FDAccount();
+            BankAccountobj.showDetails();
+
+
+
+
+        }	
+    </script>
+</head>
+
+</html>
