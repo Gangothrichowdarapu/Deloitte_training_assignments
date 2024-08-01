@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <body>
+            Enter a string:<input type="text" id="textinput">
+            <br>
+            <br>
+            <input type="button" onclick="countwords()" value="count">
+            <p id="result"></p>
+            <script>
+                function countwords(){
+                    var userInput=document.getElementById('textinput').value;
+
+                    var words=userInput.trim().split(/\s+/);
+
+                    document.getElementById('result').innerText="number of word:"  +words.length;
+                }
+            </script>
+        </body>
+    </head>
+</html>
